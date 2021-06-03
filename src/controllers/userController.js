@@ -4,6 +4,10 @@ const bcrypt = require("bcryptjs");
 
 module.exports = {
 
+  async index(req, res){
+    return res.json({userid: req.userId});
+  },
+
   async createUser(req, res){
     const {email, password} = req.body;
 
